@@ -51,35 +51,38 @@ export default function Calculadora() {
   const displayNumero = numero.toString().replace(".", ",");
 
   return (
-<div style={{ width: '300px', margin: '50px auto', padding: '20px', borderRadius: '10px', backgroundColor: '#2e3b4e' }}>
-    <h1 style={{ textAlign: 'center', color: '#fff' }}>{displayNumero}</h1>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
-        <button style={buttonStyle} onClick={limpar}>AC</button>
-        <button style={buttonStyle} onClick={mudarSinal}>+/-</button>
-        <button style={buttonStyle} onClick={porcentagem}>%</button>
-        <button style={buttonStyleOrange} onClick={operadorHandler} value="/">/</button>
+    <div style={{ width: '300px', margin: '50px auto', padding: '20px', borderRadius: '10px', backgroundColor: '#2e3b4e' }}>
+        <div style={{backgroundColor: '#fff', padding: '10px', borderRadius: '5px', marginBottom: '10px'}}>
+            <h1 style={{ textAlign: 'center', color: '' }}>{displayNumero}</h1>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+            <button style={buttonStyle} onClick={limpar}>AC</button>
+            <button style={buttonStyle} onClick={mudarSinal}>+/-</button>
+            <button style={buttonStyle} onClick={porcentagem}>%</button>
+            <button style={buttonStyleOrange} onClick={operadorHandler} value="/">/</button>
 
-        <button style={buttonStyle} onClick={inserirNumero} value={7}>7</button>
-        <button style={buttonStyle} onClick={inserirNumero} value={8}>8</button>
-        <button style={buttonStyle} onClick={inserirNumero} value={9}>9</button>
-        <button style={buttonStyleOrange} onClick={operadorHandler} value="X">X</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={7}>7</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={8}>8</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={9}>9</button>
+            <button style={buttonStyleOrange} onClick={operadorHandler} value="X">X</button>
 
-        <button style={buttonStyle} onClick={inserirNumero} value={4}>4</button>
-        <button style={buttonStyle} onClick={inserirNumero} value={5}>5</button>
-        <button style={buttonStyle} onClick={inserirNumero} value={6}>6</button>
-        <button style={buttonStyleOrange} onClick={operadorHandler} value="-">-</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={4}>4</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={5}>5</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={6}>6</button>
+            <button style={buttonStyleOrange} onClick={operadorHandler} value="-">-</button>
 
-        <button style={buttonStyle} onClick={inserirNumero} value={1}>1</button>
-        <button style={buttonStyle} onClick={inserirNumero} value={2}>2</button>
-        <button style={buttonStyle} onClick={inserirNumero} value={3}>3</button>
-        <button style={buttonStyleOrange} onClick={operadorHandler} value="+">+</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={1}>1</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={2}>2</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={3}>3</button>
+            <button style={buttonStyleOrange} onClick={operadorHandler} value="+">+</button>
 
-        <button style={buttonStyle} onClick={inserirNumero} value={0}>0</button>
-        <button style={buttonStyle} onClick={inserirNumero} value=",">,</button>
-        <button style={buttonStyle}></button>
-        <button style={buttonStyleOrange} onClick={calcular}>=</button>
+            <button style={buttonStyle} onClick={inserirNumero} value={0}>0</button>
+            <button style={buttonStyle} onClick={inserirNumero} value=",">,</button>
+            <button style={buttonStyle}></button>
+            <button style={buttonStyleOrange} onClick={calcular}>=</button>
+        </div>
     </div>
-</div>
   );
 }
 
